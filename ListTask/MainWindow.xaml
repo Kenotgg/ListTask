@@ -1,0 +1,22 @@
+﻿<Window x:Class="ListTask.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListTask"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListView Name="listView1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="160,97,282,180">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="160,329,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.48,1.655" Height="38" Width="68" Click="DeleteHighlitedElement" />
+        <Button Content="Add" HorizontalAlignment="Right" Margin="0,329,282,0" VerticalAlignment="Top" Height="38" Width="67" Click="AddElementToListView"/>
+        <Button Content="Clear All" HorizontalAlignment="Left" Margin="305,329,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.48,1.655" Height="38" Width="68" Click="DeleteAllElements" />
+    </Grid>
+
+</Window>
